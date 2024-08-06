@@ -25,6 +25,17 @@
   background-color: #eee;
 }
 
+body > .progress {
+  background-color: var(--main-clr);
+  height: 5px;
+  width: 0;
+  transition: all 0.3s ease;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -48,6 +59,7 @@ a {
 
 body {
   overflow-x: hidden;
+  position: relative;
 }
 
 /* Small */
@@ -567,11 +579,14 @@ header .container ul li:nth-child(4):hover .mega-menu {
   background-color: #e6e6e7;
 }
 
-.article-cards .items-footer a {
+.article-cards .items-footer button {
   color: var(--main-clr);
   font-size: 17px;
   font-weight: bold;
   padding: 20px 0 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .article-cards .items-footer i {
@@ -1935,6 +1950,12 @@ header .container ul li:nth-child(4):hover .mega-menu {
   height: 200px;
 }
 
+.discount .right .counter {
+  color: var(--main-clr);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
 .discount .right input[type="submit"] {
   background-color: var(--main-clr);
   font-size: 18px;
@@ -1997,10 +2018,13 @@ footer .box-1 .social {
   gap: 10px;
 }
 
+footer .box-1 .social a {
+  color: #b9b9b9;
+}
+
 footer .box-1 .social i {
   background-color: #313131;
   font-size: 20px;
-  transition: background-color 0.5s ease;
   border-radius: 6px;
   cursor: pointer;
   display: inline-flex;
@@ -2008,7 +2032,7 @@ footer .box-1 .social i {
   align-items: center;
   width: 50px;
   height: 50px;
-  transition: color var(--main-transition-dur) ease;
+  transition: color var(--main-transition-dur) ease, background-color 0.5s ease;
 }
 
 footer .box-1 .social i:hover {
